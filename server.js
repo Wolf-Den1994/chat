@@ -26,4 +26,6 @@ io.on('connection', soket => {
     'set username', // type
     soket.username // payload (в payload можно передавать и объеты) см client 7 строка
   );
+  // отправить всем пользователям, кроме user, что он присоеденился
+  soket.broadcast.emit('user joined', soket.username);
 })
