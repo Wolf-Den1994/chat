@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     messages.renderSystemMessage(`${name} left.`);
   });
 
+  soket.onChatMessage(({name, message}) => {
+    messages.renderMessage(name, message);
+  });
+
   // messageForm.onSubmit(value => {
   //   soket.emitChatMessage(value);
   // });

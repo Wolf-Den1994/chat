@@ -17,6 +17,10 @@ export class Soket {
     this.soket.on('user left', handler);
   }
 
+  onChatMessage = handler => {
+    this.soket.on('chat message', handler);
+  }
+
   emitChatMessage = message => {
     this.soket.emit('chat message', message);
   }
