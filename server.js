@@ -26,7 +26,4 @@ io.on('connection', soket => {
     'set username', // type
     soket.username // payload (в payload можно передавать и объеты) см client 7 строка
   );
-
-  // получение с client 30 строки объека и вывод его в консоль на сервере
-  // soket.on('i am here to send something to server', iAmUser => console.log(iAmUser.name, iAmUser.age));
 })
