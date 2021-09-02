@@ -32,4 +32,8 @@ io.on('connection', soket => {
   soket.on('disconnect', () => {
     soket.broadcast.emit('user left', soket.username);
   });
+  // прием сообщения с client
+  soket.on('chat message', message => {
+    console.log( {message})
+  });
 })
