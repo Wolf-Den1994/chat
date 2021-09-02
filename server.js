@@ -28,4 +28,8 @@ io.on('connection', soket => {
   );
   // отправить всем пользователям, кроме user, что он присоеденился
   soket.broadcast.emit('user joined', soket.username);
+
+  soket.on('disconnect', () => {
+    soket.broadcast.emit('user left', soket.username);
+  });
 })

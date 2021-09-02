@@ -12,4 +12,8 @@ export class Soket {
   onUserJoined = handler => {
     this.soket.on('user joined', handler);
   }
+
+  onUserLeft = handler => {
+    this.soket.on('user left', handler);
+  }
 }

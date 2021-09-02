@@ -13,5 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   soket.onUserJoined(name => {
     messages.renderSystemMessage(`${name} joined.`);
-  })
+  });
+  soket.onUserLeft(name => {
+    messages.renderSystemMessage(`${name} left.`);
+  });
 });
